@@ -1,0 +1,9 @@
+scp map.war webuser@185.22.64.109:/home/webuser/tomcat
+99e3a5
+
+ssh webuser@185.22.64.109
+cp map.war tomcat/webapps/
+
+f7b3640203
+
+

@@ -1,0 +1,466 @@
+{
+  "copyright": "Copyright (c) 2015 Highsoft AS, Based on data from Natural Earth",
+  "copyrightShort": "Natural Earth",
+  "copyrightUrl": "http://www.naturalearthdata.com",
+  "crs": {
+    "properties": {
+      "name": "urn:ogc:def:crs:EPSG:54003"
+    },
+    "type": "name"
+  },
+  "features": [
+
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#a60438",
+        "stroke-width": 6,
+        "stroke-opacity": 3
+      },
+
+      "geometry": {
+        "coordinates": [
+          [
+            [2278,8309],
+            [767,5899],
+            [513,5937],
+            [494,5770],
+
+            [283,5695],
+
+            [494,5770],
+            [513,5937],
+            [767,5899],
+            [2278,8309]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "id": "KZ.RO6",
+      "properties": {
+        "name": "Astana-Aktau road corridor (Beyneu-Aktau)",
+        "postal-code": "RO6"
+
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [8003,5977],
+            [7118,5692],
+            [7118,5692],
+            [8003,5977]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "id": "KZ.RO1",
+      "properties": {
+        "name": "Khargos-Almaty",
+        "postal-code": "RO1"
+      },
+      "type": "Feature"
+    },
+
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [5642,8235],
+            [6042,7826],
+            [6042,7826],
+            [5642,8235]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "id": "KZ.RO2",
+      "properties": {
+        "alt-name": null,
+        "country": "Kazakhstan",
+        "fips": "KZ051",
+        "hasc": "KZ.RO2",
+        "hc-a2": "RO2",
+        "hc-group": "admin1",
+        "hc-key": "kz-as",
+        "hc-middle-x": 0.52000000000000002,
+        "hc-middle-y": 0.46000000000000002,
+        "labelrank": "4",
+        "latitude": "51.1503",
+        "longitude": "71.4538",
+        "name": "Astana-Almaty road corridor",
+        "postal-code": "RO2",
+        "region": null,
+        "subregion": null,
+        "type": null,
+        "type-en": "",
+        "woe-id": "20070181",
+        "woe-label": "Astana, KZ, Kazakhstan",
+        "woe-name": "Road Silk"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [6043,7824],
+            [6466,6693],
+            [6322,6530],
+            [6259,6336],
+            [6303,6186],
+            [6397,6017],
+            [6303,6186],
+            [6259,6336],
+            [6322,6530],
+            [6466,6693],
+            [6043,7824]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "id": "KZ.RO3",
+      "properties": {
+        "alt-name": null,
+        "country": "Kazakhstan",
+        "fips": "KZ051",
+        "hasc": "KZ.RO3",
+        "hc-a2": "RO3",
+        "hc-group": "admin1",
+        "hc-key": "kz-as",
+        "hc-middle-x": 0.52000000000000002,
+        "hc-middle-y": 0.46000000000000002,
+        "labelrank": "4",
+        "latitude": "51.1503",
+        "longitude": "71.4538",
+        "name": "Astana-Almaty road corridor (project section)",
+        "postal-code": "RO3",
+        "region": null,
+        "subregion": null,
+        "type": null,
+        "type-en": "",
+        "woe-id": "20070181",
+        "woe-label": "Aksyek, KZ, Kazakhstan",
+        "woe-name": "Road Silk"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [6412,6014],
+            [6943,5774],
+            [7037,5689],
+            [6943,5774],
+            [6412,6014]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "id": "KZ.RO4",
+      "properties": {
+        "name": "Astana-Almaty road corridor",
+        "postal-code": "RO4"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [5566,8291],
+            [4332,7949],
+            [4326,7950],
+            [4170,7978],
+            [3948,7939],
+            [3946,7937],
+            [3466,7689],
+
+            [2424,7050],
+
+            [3466,7689],
+            [3946,7937],
+            [3948,7939],
+            [4170,7978],
+            [4326,7950],
+            [4332,7949],
+            [5566,8291]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "id": "KZ.RO5",
+      "properties": {
+        "name": "Astana-Aktau road corridor",
+        "postal-code": "RO5"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [2424,7050],
+            [1862,7655],
+            [2424,7050]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "id": "KZ.RO6",
+      "properties": {
+        "name": "Astana-Aktau road corridor",
+        "postal-code": "RO6"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [1821,7966],
+            [1862,7661],
+            [784,7014],
+            [1862,7661],
+            [1821,7966]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "id": "KZ.RO7",
+      "properties": {
+        "name": "Astana-Aktau road corridor (Aktobe-Makat)",
+        "postal-code": "RO7"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [832,7014],
+            [1278,6313],
+            [832,7014]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "id": "KZ.RO8",
+      "properties": {
+        "name": "Astana-Aktau road corridor (Makat-Beyneu)",
+        "postal-code": "RO8"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [1278,6309],
+            [767,5899],
+            [513,5937],
+            [494,5770],
+
+            [283,5695],
+
+            [494,5770],
+            [513,5937],
+            [767,5899],
+            [1278,6309]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "id": "KZ.RO9",
+      "properties": {
+        "alt-name": null,
+        "country": "Kazakhstan",
+        "name": "Astana-Aktau road corridor (Beyneu-Aktau)",
+        "postal-code": "RO9"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [7025,5659],
+            [6536,5644],
+            [6172,5654],
+            [5874,5581],
+            [5627,5575],
+            [5392,5444],
+            [5627,5575],
+            [5874,5581],
+            [6172,5654],
+            [6536,5644],
+            [7025,5659]
+            ]
+        ],
+        "type": "MultiLineString"
+      },
+      "id": "KZ.RO10",
+      "properties": {
+        "name": "Almaty-Zhambul road corridor",
+        "postal-code": "RO10"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [5385,5444],
+            [5269,5375],
+            [5178,5319],
+            [5076,5241],
+            [5069,5115],
+            [5077,5085],
+            [5077,5085],
+            [5069,5115],
+            [5076,5241],
+            [5178,5319],
+            [5269,5375],
+            [5385,5444]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "id": "KZ.RO11",
+      "properties": {
+        "name": "Zhambul-Shymkent",
+        "postal-code": "RO11"
+      },
+      "type": "Feature"
+    }
+  ,
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [5071,5297],
+            [4875,5456],
+            [4735,5522],
+            [4641,5625],
+            [3968,6083],
+            [3678,6158],
+            [3519,6205],
+            [3481,6401],
+            [3388,6373],
+            [3238,6364],
+            [3051,6438],
+            [2995,6719],
+            [2958,7131],
+            [2958,7131],
+            [2995,6719],
+            [3051,6438],
+            [3238,6364],
+            [3388,6373],
+            [3481,6401],
+            [3519,6205],
+            [3678,6158],
+            [3968,6083],
+            [4641,5625],
+            [4735,5522],
+            [4875,5456],
+            [5071,5297]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "id": "KZ.RO12",
+      "properties": {
+        "name": "Shymkent-KO border",
+        "postal-code": "RO12"
+      },
+      "type": "Feature"
+    }
+  ,
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [2948,7140],
+            [2808,7467],
+            [2611,7748],
+            [2808,7467],
+            [2948,7140]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "id": "KZ.RO13",
+      "properties": {
+        "name": "KO border-Karabutak",
+        "postal-code": "RO13"
+      },
+      "type": "Feature"
+    }
+  ,
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [2609,7753],
+            [2567,7855],
+            [2111,7928],
+            [2090,7933],
+            [1826,7972],
+
+            [2090,7933],
+            [2111,7928],
+            [2567,7855],
+            [2609,7753]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "id": "KZ.RO14",
+      "properties": {
+        "name": "Karabutak-Aktobe",
+        "postal-code": "RO14"
+      },
+      "type": "Feature"
+    }
+  ,
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [1816,7977],
+            [1789,8078],
+            [1705,8124],
+            [1551,8172],
+            [1705,8124],
+            [1789,8078],
+            [1816,7977]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "id": "KZ.RO15",
+      "properties": {
+        "name": "Aktobe-Martuk",
+        "postal-code": "RO15"
+      },
+      "type": "Feature"
+    }
+  ],
+  "hc-transform": {
+    "default": {
+      "crs": "+proj=mill +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R_A +datum=WGS84 +units=m +no_defs",
+      "jsonmarginX": -999,
+      "jsonmarginY": 9851.0,
+      "jsonres": 15.5,
+      "scale": 0.00015412715706599999,
+      "xoffset": 5168269.5557800001,
+      "yoffset": 6863579.4110099999
+    }
+  },
+  "title": "Kazakhstan",
+  "type": "FeatureCollection",
+  "version": "1.1.2"
+}

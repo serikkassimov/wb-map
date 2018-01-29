@@ -1,0 +1,96 @@
+.map {
+    background-color: #049cdb;
+    text-align: center;
+    position: relative;
+    height: 400px;
+    width: 400px;
+    float: left;
+}
+
+.button1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.part0 {
+    fill: #ffd42a;
+}
+
+.part0:hover {
+    fill: url("#grad0");
+}
+
+.part1 {
+    fill: #ffd42a;
+}
+
+.part1:hover {
+    fill: url("#grad1");
+}
+
+.part2 {
+    fill: #ffd42a;
+}
+
+.part2:hover {
+    fill: url("#grad2");
+}
+
+.description {
+    margin-left: 5px;
+    float: left;
+    top: 0px;
+    box-sizing: border-box;
+    width: 250px;
+    background-color: #049cdb;
+    border-radius: 0px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    min-height: 400px;
+    transition: opacity .5s;
+}
+
+.d_header {
+    background-color: darkgoldenrod;
+    color: white;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    padding: 8px;
+    min-height: 50px;
+}
+
+.d_items {
+    padding: 10px 5px 25px 15px;
+}
+
+.outcomes_button:hovers {
+    fill: #ad8f1b;
+}
+
+.outcomes_button {
+    fill: #ffd42a;
+}
+
+.outcomes_button_select {
+    fill: #ad8f1b;
+}
+
+.instrument_button:hovers {
+    fill: #ad8f1b;
+}
+
+.instrument_button {
+    fill: #ffd42a;
+}
+
+.instrument_button_select {
+    fill: #ad8f1b;
+}
+
+
+.out_data {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(45deg);
+}

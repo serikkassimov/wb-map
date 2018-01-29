@@ -1,0 +1,80 @@
+{
+  "copyright": "Copyright (c) 2015 Highsoft AS, Based on data from Natural Earth",
+  "copyrightShort": "Natural Earth",
+  "copyrightUrl": "http://www.naturalearthdata.com",
+  "crs": {
+    "properties": {
+      "name": "urn:ogc:def:crs:EPSG:54003"
+    },
+    "type": "name"
+  },
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [11,6049]
+          ]
+        ],
+        "type": "Point"
+      },
+      "id": "KZ.AS",
+      "properties": {
+        "name": "Aktau",
+        "postal-code": "AS"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [832,8014],
+            [1296,7281],
+            [832,8014]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "id": "KZ.RO8",
+      "properties": {
+        "alt-name": null,
+        "country": "Kazakhstan",
+        "fips": "KZ051",
+        "hasc": "KZ.RO8",
+        "hc-a2": "RO8",
+        "hc-group": "admin1",
+        "hc-key": "kz-as",
+        "hc-middle-x": 0.52000000000000002,
+        "hc-middle-y": 0.46000000000000002,
+        "labelrank": "4",
+        "latitude": "51.1503",
+        "longitude": "71.4538",
+        "name": "Astana-Aktau road corridor (Makat-Beyneu)",
+        "postal-code": "RO8",
+        "region": null,
+        "subregion": null,
+        "type": null,
+        "type-en": "",
+        "woe-id": "20070181",
+        "woe-label": "Aksyek, KZ, Kazakhstan",
+        "woe-name": "Road Silk"
+      },
+      "type": "Feature"
+    }
+  ],
+  "hc-transform": {
+    "default": {
+      "crs": "+proj=mill +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R_A +datum=WGS84 +units=m +no_defs",
+      "jsonmarginX": -999,
+      "jsonmarginY": 9851.0,
+      "jsonres": 15.5,
+      "scale": 0.00015412715706599999,
+      "xoffset": 5168269.5557800001,
+      "yoffset": 6863579.4110099999
+    }
+  },
+  "title": "Kazakhstan",
+  "type": "FeatureCollection",
+  "version": "1.1.2"
+}
