@@ -1,3 +1,384 @@
 {
-
+  "outcomes_data": [
+    {
+      "id": 1,
+      "pillar": 1,
+      "outcome": "Prudent management of oil revenue maintained, with government net financial worth above its 2012 level of 20% of GDP by 2017. ",
+      "actual": "For most of the CPS period, the government net financial worth was maintained at levels above the one of 2012 and reached 25% in 2016",
+      "instruments": [
+        {
+          "type": "jerp",
+          "text": "Fiscal Policy for Growth; Improvement of Public Debt Management;"
+        },
+        {
+          "type": "jerp",
+          "text": "Macroeconomic and competitiveness DPL Project"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "pillar": 1,
+      "outcome": "Improved regulatory environment as measured by Doing Business ranking (from 46 in 2011 to 35 in 2017); and BEEPS share of firms citing business licensing and permits as major constraint down from 25.2% in 2009 to below 15% by 2017.",
+      "actual": "Doing Business rating has continued to improve, up to 36 (DB 2018). The most recent progress reflects important reforms in the areas of property registration, minority investors protection and contract enforcement",
+      "instruments": [
+        {
+          "type": "jerp",
+          "text": "Enhancement of Business Environment; Enterprise Modernization Support"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "pillar": 1,
+      "outcome": "TCO established, awarding at least 10 small technology commercialization grants and enabling 15 groups of scientists to perform high-quality research",
+      "actual": "TCO merged with Science Fund and is continuing grant programs, adapting TCO experience. 40 technology-based start-ups created under the grants program and 77 partnerships were signed with various commercial companies",
+      "instruments": [
+        {
+          "type": "no",
+          "text": "Technology Commercialization Project, Fostering Productive Innovation Project "
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "pillar": 1,
+      "outcome": "IFC investment in manufacturing, agribusiness, and real estate.",
+      "actual": "IFC investments in manufacturing and agribusiness contributed to 2,400 direct jobs, half of which are jobs for women ",
+      "instruments": [
+        {
+          "type": "ifc",
+          "text": "IFC investment: Real sector investments in manufacturing, and agribusiness, "
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "pillar": 1,
+      "outcome": "IFC’s provided advisory services on corporate governance and studies on tax transparency and regulatory reform.",
+      "actual": "IFC advisory to Humo&Partners and Eastcomtrans allowed improving performance due to the adoption of CG practices, which played a significant role in the companies’ access to financing (US$ 115 million). IFC prepared scorecards for the adoption by Stock Exchange (KASE) and SZP (Partner)",
+      "instruments": [
+        {
+          "type": "ifc",
+          "text": "IFC Advisory services"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "pillar": 1,
+      "outcome": "Ratio of NPLs to total loans (32.6% in 2012) at least halved by 2017 and well provisioned.",
+      "actual": "As of end June 2017, ratio of NPLs to total loans stood at 10.7%, (and mostly due to assumption by KazKommerzbank of BTA’s NPLs), and loan provisioning at 11.2%. ",
+      "instruments": [
+        {
+          "type": "jerp",
+          "text": "Improvement of insolvency system; Strengthening of Financial Sector Stability "
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "pillar": 1,
+      "outcome": "IFC invested in financial institutions, including microfinance and universal banking. IFC trade guarantees.",
+      "actual": "IFC investments in Kaz MicroFinance, BCC, and Sberbank KZ helped expand their financial services to more than 134,000 SMEs.",
+      "instruments": [
+        {
+          "type": "ifc",
+          "text": "Financial sector investments; trade finance lines and credit lines for SMEs "
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "pillar": 1,
+      "outcome": "IFC provided advisory services to microfinance institution on corporate governance, branch management, and loan officer development.",
+      "actual": "IFC’s advisory services to Arnur Credit contributed to its transformation into a sustainable financial institution and expansion to rural areas. The company has doubled its loan portfolio from KZT 3.9 billion in 2016 to KZT 6.24 billion in 2017 (US$ 19.5 million).",
+      "instruments": [
+        {
+          "type": "ifc",
+          "text": "Advisory services"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "pillar": 1,
+      "outcome": "Share of TVE programs revised in line with new (2013) competency standards by at least 20% by 2017—better equipping graduates with skills demanded in labor market.  ",
+      "actual": "A total of 147 programs (70% of total programs) have been revised in 2016, as supported by TVEM Project. As of June 2017, 91% of programs have been revised by MoES. Grants program was launched in four pilot regions resulting in selection of 2000 youth beneficiaries and 590 grants.",
+      "instruments": [
+        {
+          "type": "no",
+          "text": "Technical and Vocational Education Modernization Project; Education Modernization Project;"
+        },
+        {
+          "type": "no",
+          "text": "Youth Corps Program Grant"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "pillar": 1,
+      "outcome": "New applied technologies in farming result in increased crop/fodder output, supporting 50% increase in meat production (0.84 million/tons in 2010) by 2017.",
+      "actual": "The meat production reached 0.96 million tons at the end of 2016. The Bank delivered TA contributed to increased efficiency of the governments’ subsidies program through better targeting and elimination of subsidies that were found to be inefficient. Value of agricultural exports, including livestock products, raised to US$ 1850 million compared with 2005",
+      "instruments": [
+        {
+          "type": "jerp",
+          "text": "Strengthening Agricultural Strategy and Livestock Policy"
+        },
+        {
+          "type": "no",
+          "text": "Agriculture Competitiveness Project"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "pillar": 1,
+      "outcome": "IFC investments in agribusiness (food and beverages, agriculture commodities).",
+      "actual": "IFC provided long-term funding (in local currency and U$S) to RG Brand food processing company, which supported over 2,000 direct jobs. ",
+      "instruments": [
+        {
+          "type": "ifc",
+          "text": "Lending to agribusiness companies (food processing, food retail)"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "pillar": 1,
+      "outcome": "IFC Food Safety Program focuses on food safety practices and standards",
+      "actual": "In-depth advisory services were provided to Kazbeef- a food producer in Kazakhstan - to implement food safety management systems. IFC advise helped to build the capacity of eight suppliers of processed food in partnership with Metro ",
+      "instruments": [
+        {
+          "type": "ifc",
+          "text": "IFC Regional Agristandards Advisory Services"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "pillar": 1,
+      "outcome": "IFC advisory services on renewable energy and energy efficiency",
+      "actual": "In FY17 RG brand adopted IFC recommendations to improve water and energy efficiency, saving 13,572 cubic meters of water and 539 Mwh of energy",
+      "instruments": [
+        {
+          "type": "ifc",
+          "text": "IFC Regional ECA Energy & Water Advisory "
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "pillar": 1,
+      "outcome": "KEGOC’s transmission capacity increased by 5% between 2012 (34,000 MVA) and 2017 to alleviate existing and projected power shortages in southern and eastern part of country.",
+      "actual": "As of end-2016 (KEGOC Annual Report 2016), KEGOC power transmission capacity was 36,663 MVA. 325.18 km of transmission lines constructed, making additional 300 Megawatts (MW) available The project helped reduce the number of outages in Almaty Branch of KEGOC (2), the total duration of outages (1.25 hours), and the total resulting amount of unmet electricity demand (0.092 GWh) 7.5 TWh electricity transfer from northern Kazakhstan to southern Kazakhstan through the second North-South interconnector",
+      "instruments": [
+        {
+          "type": "no",
+          "text": "Moinak Electricity Transmission Project;"
+        },
+        {
+          "type": "no",
+          "text": "Alma Electricity Transmission Project;"
+        },
+        {
+          "type": "no",
+          "text": "North-South Electricity Transmission Project"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "pillar": 1,
+      "outcome": "15) Increased transport efficiency through reduction in road-user costs and rate of road crash fatalities along 1,062 km section of WE-WC Road Corridor by at least 10% by 2017.",
+      "actual": "As of end-2016, government data shows reduction in crash fatalities in Southern Kazakhstan and Kyzylorda regions and 8% reduction in road-user costs.",
+      "instruments": [
+        {
+          "type": "no",
+          "text": "South-West Roads Project, East-West Roads Project"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "pillar": 1,
+      "outcome": "IFC invested in rail leasing company.",
+      "actual": "IFC equity investments in Eastcomtrans, a railcar leasing company, helped to fund the company’s expansion program (US$120m), as well as to renew and diversify its existing fleet. Eastcomtrans grew its sales from US$66.5m in FY12 to US$73.3m in FY17. The company supported 174 jobs (81 of which for women). ",
+      "instruments": [
+        {
+          "type": "ifc",
+          "text": "Private infrastructure project"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "pillar": 1,
+      "outcome": "IFC advising to structure and implement an international tender for the BAKAD.",
+      "actual": "IFC facilitated the revamped negotiation on BAKAD in FY17. If the concession materializes, nearly U$S800 million of private investment will be mobilized.",
+      "instruments": [
+        {
+          "type": "ifc",
+          "text": "PPP Transaction Advisory Service"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "pillar": 2,
+      "outcome": "Physical inspections of import declarations reduced from 70% in 2007 to 20% by 2017; and average customs processing time at border (24 hours in 2010) reduced by 75% by 2017.",
+      "actual": "Physical inspections down to 4.9% by 2017, compared to 70% in 2007; and average customs processing time at border posts down to 7 hours by 2017, thus reduced by 71% compared to 24 hours in 2010, based on client surveys. Percentage of electronic filing (legal entities) increased to 90% and average time taken by taxpayers to comply with tax obligations reduced to 178 hours Data on judgments enforced, registrations processed, inspections and clearance is published on the respective websites of the Ministry of Justice, the Supreme Court and project-supported pilot courts",
+      "instruments": [
+        {
+          "type": "jerp",
+          "text": "Civil Service Reform;"
+        },
+        {
+          "type": "no",
+          "text": "Customs Development Project;"
+        },
+        {
+          "type": "no",
+          "text": "Tax Administration Reform Project"
+        },
+        {
+          "type": "no",
+          "text": "Justice Sector Institutional Strengthening Project"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "pillar": 2,
+      "outcome": "Increase in e-procurement transactions (25,000 in 2012) by 20% by 2017, and introduction by 2014 of electronic reverse auction system.",
+      "actual": "All public procurement is undertaken through e-procurement",
+      "instruments": [
+        {
+          "type": "jerp",
+          "text": "Development of e-Procurement System; "
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "pillar": 2,
+      "outcome": "Quality and efficiency of public spending improved through introduction of targeted reviews of selected areas on rolling basis, with at least four reviews completed during 2013–16.",
+      "actual": "Numerous Bank TAs considered a wide range of topics that affect public expenditures, including: taxation, investment and budget management, public service pay reform etc. All the data and analysis were synthesized in the 2017 Public Finance Review",
+      "instruments": [
+        {
+          "type": "jerp",
+          "text": "Expenditure Efficiency Reviews; Improved Approach to Results-Oriented Budgeting; Improvement in Intergovernmental Fiscal Relations;"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "pillar": 2,
+      "outcome": "International standard user satisfaction survey on quality and reliability of statistical data introduced in 2012 with 80% satisfaction rates by 2017.",
+      "actual": "User satisfaction rates have significantly increased to 94.4%, and 100% of statistical outputs are released within the time limits and with frequency meeting the Special Data Dissemination Standard (SDDS) requirements",
+      "instruments": [
+        {
+          "type": "no",
+          "text": "Statistical Capacity Building Project "
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "pillar": 2,
+      "outcome": "Conditional cash transfers piloted in at least two regions.",
+      "actual": "Conditional cash transfers were piloted in three regions in 2013, and further roll-out was implemented by the Government.",
+      "instruments": [
+        {
+          "type": "jerp",
+          "text": "Improvement of Social Safety Net System; Strengthening Pension System"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "pillar": 2,
+      "outcome": "By 2016, 10% reduction in population's out-of-pocket health expenditures as share of total health expenditures (32.9% in 2010).",
+      "actual": "Share of household health spending in total health expenditures still accounts for 35.3% (2016). Under the project, 746 public health facilities accredited by national accreditation body in accordance with international standards",
+      "instruments": [
+        {
+          "type": "no",
+          "text": "Health Sector Technology Transfer and Institutional Reform Project"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "pillar": 3,
+      "outcome": "Remediation of the high-priority industrial waste dumps polluting the air and groundwater in Ust-Kamenogorsk and establishment of groundwater monitoring system",
+      "actual": "Five high risk waste dumps and slurry ponds located in the city area have been contained through stabilization, dewatering and covering. Groundwater quality monitoring system has been established",
+      "instruments": [
+        {
+          "type": "no",
+          "text": "Ust-Kamenogorsk Environmental Remediation Project"
+        },
+        {
+          "type": "jerp",
+          "text": "Review and Analysis of Norms and Standards Applicable to Industrial Hazardous Wastes in Kazakhstan;"
+        },
+        {
+          "type": "no",
+          "text": "Partnership for Market Readiness Grant"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "pillar": 3,
+      "outcome": "Reforestation of 44,000 ha completed; and damage from forest fire in Irtysh Pine Forest reduced by 50% by 2017 (9 ha per case of fire on average during 2009–11).",
+      "actual": "Reforestation of 46,000 ha completed and fire damage in Irtysh Pine Forest reduced by 70%; 61,000 ha of the dry Aral seabed covered with vegetation; 650,000 ha of forest under improved fire management.",
+      "instruments": [
+        {
+          "type": "no",
+          "text": "Forest Protection and Reforestation Project;"
+        },
+        {
+          "type": "no",
+          "text": "Forest Protection and Reforestation Grant"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "pillar": 3,
+      "outcome": "Water supply systems rehabilitated in 113,000 ha covering four southern oblasts, bringing water distribution by service providers to levels demanded by farmers.",
+      "actual": "Contracts were signed to improve irrigation and drainage services on 40,000 ha area",
+      "instruments": [
+        {
+          "type": "no",
+          "text": "Second Irrigation and Drainage Project"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "pillar": 3,
+      "outcome": "Cumulative energy savings in targeted public facilities will increase from 0 to 825 GWh by 2017",
+      "actual": "The remediation works on the first set of projects are ongoing, with the first 19 projects (out of targeted 75) substantially or fully completed, while the tendering and contracting is proceeding on the subsequent batches",
+      "instruments": [
+        {
+          "type": "no",
+          "text": "Energy Efficiency Grant"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "pillar": 3,
+      "outcome": "IFC advisory services on renewable energy and energy efficiency",
+      "actual": "IFC contributed to the drafting and adoption of the Green Economy Law and secondary regulations, and helped adopt a mechanism for indexing fed-in tariffs to foreign exchange rate fluctuations. IFC recommendations to RG Brand on water and energy efficiency contributed to water and energy savings,  leading to 236 metric tons of GHG emissions that were avoided.",
+      "instruments": [
+        {
+          "type": "ifc",
+          "text": "IFC Central Asia and Caucasus Energy Infrastructure regional project"
+        }
+      ]
+    }
+  ]
 }

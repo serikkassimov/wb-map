@@ -6,7 +6,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Main page</title>
-    <script src="https://unpkg.com/vue"></script>
+    <script src="pages/js/vue.js"></script>
+    <script src="pages/js/vue-resource.min.js"></script>
     <link rel="stylesheet" href="<c:url value="/pages/css/map_data.css"/>" type="text/css"/>
     <script type="text/javascript" src="<c:url value="/pages/js/jquery-1.11.3.min.js" />"></script>
 
@@ -15,7 +16,7 @@
 <body>
 <div id="app">
     <div class="map">
-        <svg viewBox="0 0 210 297">
+        <svg viewBox="-30 -35 270 297">
             <path d="M 95.014316,131.29289 74.434561,131.02562 94.346142,112.45039 C
             100.0483,101.45911 98.3022,95.973071 95.949758,90.935195 90.478969,82.315168 84.663453,80.244962
             78.844509,78.239892 72.200662,77.526768 65.693833,77.005468 62.541067,81.179857 c -2.941566,4.383114 -1.975039,9.026767
@@ -39,7 +40,7 @@
         </svg>
 
 
-        <svg viewBox="0 0 210 297" class="button1">
+        <svg viewBox="-30 -35 270 297" class="button1">
             <defs>
                 <linearGradient id="grad0" x1="0%" y1="100%" x2="0%" y2="30%">
                     <stop offset="0%" style="stop-color:#ffd42a;stop-opacity:1"/>
@@ -75,7 +76,17 @@
               8.49177,8.997947 14.83346,2.939968 3.56184,-4.726122 2.70073,-9.599104 1.20272,-14.165284 -4.98903,-5.102147 -9.97807,-3.782413
               -14.9671,-3.608139 -11.48283,2.893687 -14.90449,8.062175 -18.8425,13.630744 z"
                   v-on:mouseover="showDescription(2)" v-on:mouseout="closeDescription()"></path>
+            <template v-for="(item,index) in outcomes_data">
+                <path
+                        v-for="(inst, ins_ind) in item.instruments"
+                        v-bind:class="instrument_button(item)"
+                        v-bind:transform=getPathInstrTranform(index)
+                        v-bind:d="getPathInstrumentN(index, ins_ind)"
+                        v-on:mouseover="showInstrumentDescription(inst, item,  $event)"
+                        v-on:mouseout="closeInstrumentDescription(inst, item, $event)"/>
 
+                </path>
+            </template>
             <path v-for="(item,index) in outcomes_data" v-bind:class="outcomes_button(item)"
                   v-bind:transform=getPathTranform(index)
                   d="m 25.123334,44.511901 c -4.995669,0 -5.635633,
@@ -84,12 +95,7 @@
             6.766983,-8.164152 9.888972,-5.66964 -4.444739,10e-7 -5.87099,9.732891 -9.888973,9.732891 z"
                   v-on:mouseover="showOutcomesDescription(item, $event)"
                   v-on:mouseout="closeOutcomesDescription(item, $event)"/>
-            <path v-for="(item,index) in outcomes_data" v-bind:class="instrument_button(item)"
-                  v-bind:transform=getPathTranform(index)
-                  v-bind:d=getPathInstrument(index)
-                  v-on:mouseover="showInstrumentDescription(item, $event)"
-                  v-on:mouseout="closeInstrumentDescription(item, $event)"/>
-            </path>
+
         </svg>
     </div>
     <div class="description">
@@ -106,6 +112,7 @@
         data: {
             show_desc: false,
             message: 'Вот когда вы загрузили эту страницу: ' + new Date().toLocaleString(),
+            box_size: "-15 -15 250 297",
             pillar_current: {
                 header: "",
                 outcomes: 0,
@@ -120,181 +127,7 @@
                 {id: 3, pillar: "Ensuring development is environmentally sustainable"},
 
             ],
-            outcomes_data: [
-                {
-                    id: 1,
-                    pillar: 1,
-                    outcome: "Prudent management of oil revenue maintained, with government net financial worth (measured by difference between stock of NFRK assets and sovereign debt) above its 2012 level of 20% of GDP by 2017. ",
-                    instruments: [
-                        {
-                            type: "jerp",
-                            text: "Fiscal Policy for Growth; Improvement of Public Debt Management"
-                        },
-                        {
-                            type: "jerp",
-                            text: "Macroeconomic and competitiveness DPL Project"
-                        }
-                    ]
-                },
-                {
-                    id: 2,
-                    pillar: 1,
-                    outcome: "Improved regulatory environment as measured by Doing Business ranking (up from 46 in 2011 to below 30 in 2017); and BEEPS share of firms citing business licensing and permits as major constraint down from 25.2% in 2009 to below 15% by 2017.",
-                    instruments: [
-                        {
-                            type: "jerp",
-                            text: "Enhancement of Business Environment; Enterprise Modernization Support "
-                        }
-                    ]
-                },
-                {
-                    id: 3,
-                    pillar: 1,
-                    outcome: "Improved regulatory environment as measured by Doing Business ranking (up from 46 in 2011 to below 30 in 2017); and BEEPS share of firms citing business licensing and permits as major constraint down from 25.2% in 2009 to below 15% by 2017. ",
-                    instruments: [
-                        {
-                            type: "jerp",
-                            text: "Enhancement of Business Environment; Enterprise Modernization Support "
-                        }
-                    ]
-                },
-                {
-                    id: 4,
-                    pillar: 1,
-                    outcome: "Share of firms with female participation in ownership increased from 34.3% in 2009 to above 40% by 2017 and with female top managers increased from 24.7 % in 2009 to above 30% by 2017.",
-                    instruments: [
-                        {
-                            type: "no",
-                            text: "Technology Commercialization Project, Fostering Productive Innovation Project"
-                        }
-                    ]
-                },
-                {
-                    id: 5,
-                    pillar: 1,
-                    outcome: "TCO established, awarding at least 10 small technology commercialization grants (pre-commercialization, joint research with industry, international patenting, industrial internship for scientists) and enabling at least 15 groups of scientists to perform high-quality research.",
-                    instruments: [
-                        {
-                            type: "ifc",
-                            text: "Real sector investments in manufacturing, and agribusiness"
-                        }
-                    ]
-                },
-                {
-                    id: 6,
-                    pillar: 1,
-                    outcome: "IFC invested in manufacturing (paper packaging, cement), agribusiness (food and beverages, agriculture commodities), and real estate."
-                },
-                {
-                    id: 7,
-                    pillar: 1,
-                    outcome: "IFC provided advisory services on corporate governance to Government and over 100 companies and conducted studies on tax transparency and regulatory reform."
-                },
-                {
-                    id: 8,
-                    pillar: 1,
-                    outcome: "Ratio of NPLs to total loans (32.6% in 2012) at least halved by 2017 and well provisioned."
-                },
-                {
-                    id: 9,
-                    pillar: 1,
-                    outcome: "IFC invested in financial institutions, including microfinance and universal banking. It also provided trade guarantees. Sector portfolio is serving 15,200 microfinance and 10,000 SME clients."
-                },
-                {
-                    id: 10,
-                    pillar: 1,
-                    outcome: "IFC provided advisory services to microfinance institution on corporate governance, branch management, and loan officer development―to improve its lending operations and serve more rural and thus support rural development."
-                },
-                {
-                    id: 11,
-                    pillar: 1,
-                    outcome: "Share of technical vocational education programs revised in line with new (2013) competency standards by at least 20% by 2017—better equipping graduates with skills demanded in labor market. "
-                },
-                {
-                    id: 12,
-                    pillar: 1,
-                    outcome: "New applied technologies in farming (for example, conservation agriculture, new methods of veterinary diseases testing) result in increased crop/fodder output, supporting 50% increase in meat production (0.84 million/tons in 2010) by 2017."
-                },
-                {
-                    id: 13,
-                    pillar: 1, outcome: "IFC invested in agribusiness (food and beverages, agriculture commodities)."
-                },
-                {
-                    id: 14,
-                    pillar: 1,
-                    outcome: "IFC Food Safety Program focuses on (a) assisting food company to implement food safety practices; (b) stimulate development of local institutional capacity for promotion and implementation of suppliers’ food safety standards; and (c) promote sectorwide demand by raising awareness of agribusiness standards and developing client pipeline among industry and stakeholders."
-                },
-                {
-                    id: 15,
-                    pillar: 1,
-                    outcome: "IFC providing advisory services on energy efficiency at two levels as explained in Area of Engagement 3, Outcome 13 (Raising Energy Efficiency)"
-                },
-                {
-                    id: 16,
-                    pillar: 1,
-                    outcome: "KEGOC’s transmission capacity increased by 5% between 2012 (34,000 MVA) and 2017 to alleviate existing and projected power shortages in southern and eastern part of country."
-                },
-                {
-                    id: 17,
-                    pillar: 1,
-                    outcome: "Increased transport efficiency through reduction in road-user costs and rate of road crash fatalities along 1,062 km section of WE-WC Road Corridor by at least 10% by 2017 (in 2007: road users’ cost was US$0.26 per vehicle-km and road crash fatalities were 11/100 million vehicle-km)."
-                },
-                {
-                    id: 18,
-                    pillar: 1, outcome: "IFC invested in rail leasing company."
-                },
-                {
-                    id: 19,
-                    pillar: 1,
-                    outcome: "IFC advises Government to structure and implement an international tender for the BAKAD."
-                },
-                {
-                    id: 20,
-                    pillar: 2,
-                    outcome: "Physical inspections of import declarations by customs reduced from 70% in 2007 to 20% by 2017; and average customs processing time at border posts (24 hours in 2010) reduced by 75% by 2017 as evidenced from client surveys."
-                },
-                {
-                    id: 21,
-                    pillar: 2,
-                    outcome: "Increase in e-procurement transactions (25,000 in 2012) by 20% by 2017, and efficiency of e-procurement system enhanced by introduction by 2014 of electronic reverse auction system."
-                },
-                {
-                    id: 22,
-                    pillar: 2,
-                    outcome: "Quality and efficiency of public spending improved through introduction of targeted reviews of selected areas on rolling basis, with at least four reviews completed during 2013–16."
-                },
-                {
-                    id: 23,
-                    pillar: 2,
-                    outcome: "International standard user satisfaction survey on quality and reliability of statistical data introduced in 2012 with 80% satisfaction rates by 2017."
-                },
-                {
-                    id: 24,
-                    pillar: 2,
-                    outcome: "Conditional cash transfers piloted in at least two regions; and, depending on need, gender parity targeted in activation support services utilization."
-                },
-                {
-                    id: 25,
-                    pillar: 2,
-                    outcome: "By 2016, 10% reduction in population's out-of-pocket health expenditures as share of total health expenditures (32.9% in 2010)."
-                },
-                {
-                    id: 26,
-                    pillar: 3,
-                    outcome: "Reforestation of 44,000 ha completed; and damage from forest fire in Irtysh Pine Forest reduced by 50% by 2017 (9 ha per case of fire on average during 2009–11)."
-                },
-                {
-                    id: 27,
-                    pillar: 3,
-                    outcome: "Water supply systems rehabilitated in 113,000 ha covering four southern oblasts, bringing water distribution by service providers to levels demanded by farmers."
-                },
-                {
-                    id: 28,
-                    pillar: 3,
-                    outcome: "IFC providing advisory services on renewable energy and energy efficiency at two levels: (a) policy level, to open up new markets through removing legal and regulatory barriers to private investments; and (b) company level, to provide targeted assistance to first-mover private sector renewable energy and utility efficiency projects."
-                },
-
-            ]
+            outcomes_data: []
 
         },
         methods: {
@@ -338,19 +171,20 @@
                 item.selected = false;
                 this.show_desc = false;
             },
-            showInstrumentDescription: function (item, event) {
+            showInstrumentDescription: function (instr, item, event) {
                 var header;
-                this.pillar_data.forEach(function (it, i, arr) {
+                /*this.pillar_data.forEach(function (it, i, arr) {
                     if (it.id == item.pillar) {
                         header = item.instruments[0].type;
                     }
-                })
+                })*/
                 item.selected = true;
-                this.pillar_current.header = "INSTRUMENTS "+header;
-                this.pillar_current.outcomes = item.instruments[0].text;
+                header = instr.type;
+                this.pillar_current.header = "INSTRUMENTS " + header;
+                this.pillar_current.outcomes = instr.text;
                 this.show_desc = true;
             },
-            closeInstrumentDescription: function (item, event) {
+            closeInstrumentDescription: function (instr, item, event) {
                 item.selected = false;
                 this.show_desc = false;
             },
@@ -359,19 +193,49 @@
                 var r = "translate(83, -25), rotate(" + p + " 25,130)";
                 return r;
             },
-            getPathInstrument: function (index) {
+            getPathInstrTranform: function (ind) {
+                var p = -145 + (ind - 1) * 11.6;
+                var r = "translate(83, -25), rotate(" + p + " 25,130)";
+                return r;
+            },
+            getPathInstrument: function (index, instr) {
                 var res = "";
                 var item = this.outcomes_data[index];
-                console.log("item", item)
-                if (item.instruments!=undefined) {
-                    if (item.instruments[0].type =="jerp") {
-                        res = "m 25.123335,53.744616 c -2.866994,-2.657201 -3.135774,-2.922921 -3.135774,-2.922921 l 3.046181,-4.074242 3.046181,4.074242 z";
-                    } else  if (item.instruments[0].type =="ifc") {
-                        res = "m 19.745587,46.690722 c 11.339546,0.105128 11.431736,0.105128 11.431736,0.105128 -1.590301,4.323369 -0.570974,6.03711 0,8.199204 l -11.422525,-0.03188 c 1.559229,-2.822055 1.455272,-5.702373 -0.0092,-8.272452 z";
-                    }  else  if (item.instruments[0].type =="no") {
-                        res = "m 25.123335,47.346727 6.910147,6.3311 -13.890625,-0.09449 z";
-                    }
+                console.log("instr", instr)
+                if (item.instruments != undefined) {
+                    item.instruments.forEach(function (instr, ind, arr) {
+                        if (instr.type == "jerp") {
+                            var i = 27.744616 - 15 * ind;
+                            res = "m 25.123335," + i + " c -2.866994,-2.657201 -3.135774,-2.922921 -3.135774,-2.922921 l 3.046181,-4.074242 3.046181,4.074242 z";
+                        } else if (instr.type == "ifc") {
+                            res = "m 19.745587,20.690722 c 11.339546,0.105128 11.431736,0.105128 11.431736,0.105128 -1.590301,4.323369 -0.570974,6.03711 0,8.199204 l -11.422525,-0.03188 c 1.559229,-2.822055 1.455272,-5.702373 -0.0092,-8.272452 z";
+                        } else if (instr.type == "no") {
+                            res = "m 25.123335,19.346727 6.910147,6.3311 -13.890625,-0.09449 z";
+                        }
+                    })
                 }
+                console.log("item instrument count", item.instruments.length);
+                return res;
+            },
+            getPathInstrumentN: function (index, inst_ind) {
+                var res = "";
+                var item = this.outcomes_data[index];
+                console.log("inst_ind", inst_ind)
+                if (item.instruments != undefined) {
+                    var instr = item.instruments[inst_ind];
+                    if (instr.type == "jerp") {
+                        var i = 27.744616 - 10 * inst_ind;
+                        res = "m 25.123335," + i + " c -2.866994,-2.657201 -3.135774,-2.922921 -3.135774,-2.922921 l 3.046181,-4.074242 3.046181,4.074242 z";
+                    } else if (instr.type == "ifc") {
+                        var i = 20.690722 - 10 * inst_ind;
+                        res = "m 19.745587," + i + " c 11.339546,0.105128 11.431736,0.105128 11.431736,0.105128 -1.590301,4.323369 -0.570974,6.03711 0,8.199204 l -11.422525,-0.03188 c 1.559229,-2.822055 1.455272,-5.702373 -0.0092,-8.272452 z";
+                    } else if (instr.type == "no") {
+                        var i = 19.346727 - 10 * inst_ind;
+                        res = "m 25.123335," + i + " 6.910147,6.3311 -13.890625,-0.09449 z";
+                    }
+
+                }
+                console.log("item instrument count", item.instruments.length);
                 return res;
             },
             outcomes_button: function (item) {
@@ -387,10 +251,22 @@
                 } else {
                     return "outcomes_button"
                 }
-            }
+            },
+            loadData: function () {
+                this.$http.get("pages/jsondata/map_data.json").then(
+                    function (response) {
+                        this.outcomes_data = JSON.parse(response.bodyText).outcomes_data;
+                        console.log("laod indicators")
+                    }, function (error) {
+                        console.log("Error load indicators")
+                    })
+            },
 
         },
-        computed: {}
+        computed: {},
+        beforeMount: function () {
+            this.loadData();
+        },
 
     })
 </script>

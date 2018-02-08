@@ -2,8 +2,8 @@
     background-color: #049cdb;
     text-align: center;
     position: relative;
-    height: 400px;
-    width: 400px;
+    height: 800px;
+    width: 800px;
     float: left;
 }
 
@@ -46,7 +46,7 @@
     background-color: #049cdb;
     border-radius: 0px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    min-height: 400px;
+    min-height: 800px;
     transition: opacity .5s;
 }
 
