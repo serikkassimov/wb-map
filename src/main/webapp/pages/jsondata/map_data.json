@@ -11,7 +11,7 @@
           "text": "Fiscal Policy for Growth; Improvement of Public Debt Management;"
         },
         {
-          "type": "jerp",
+          "type": "no",
           "text": "Macroeconomic and competitiveness DPL Project"
         }
       ]
@@ -107,7 +107,7 @@
       "actual": "A total of 147 programs (70% of total programs) have been revised in 2016, as supported by TVEM Project. As of June 2017, 91% of programs have been revised by MoES. Grants program was launched in four pilot regions resulting in selection of 2000 youth beneficiaries and 590 grants.",
       "instruments": [
         {
-          "type": "no",
+          "type": "jerp",
           "text": "Technical and Vocational Education Modernization Project; Education Modernization Project;"
         },
         {
@@ -176,27 +176,23 @@
       "instruments": [
         {
           "type": "no",
-          "text": "Moinak Electricity Transmission Project;"
-        },
-        {
-          "type": "no",
-          "text": "Alma Electricity Transmission Project;"
-        },
-        {
-          "type": "no",
-          "text": "North-South Electricity Transmission Project"
+          "text": "Moinak Electricity Transmission Project; Alma Electricity Transmission Project; North-South Electricity Transmission Project"
         }
       ]
     },
     {
       "id": 15,
       "pillar": 1,
-      "outcome": "15) Increased transport efficiency through reduction in road-user costs and rate of road crash fatalities along 1,062 km section of WE-WC Road Corridor by at least 10% by 2017.",
+      "outcome": "Increased transport efficiency through reduction in road-user costs and rate of road crash fatalities along 1,062 km section of WE-WC Road Corridor by at least 10% by 2017.",
       "actual": "As of end-2016, government data shows reduction in crash fatalities in Southern Kazakhstan and Kyzylorda regions and 8% reduction in road-user costs.",
       "instruments": [
         {
+          "type": "jerp",
+          "text": "South-West Roads Project"
+        },
+        {
           "type": "no",
-          "text": "South-West Roads Project, East-West Roads Project"
+          "text": "East-West Roads Project"
         }
       ]
     },
@@ -232,19 +228,11 @@
       "instruments": [
         {
           "type": "jerp",
-          "text": "Civil Service Reform;"
+          "text": "Civil Service Reform"
         },
         {
           "type": "no",
-          "text": "Customs Development Project;"
-        },
-        {
-          "type": "no",
-          "text": "Tax Administration Reform Project"
-        },
-        {
-          "type": "no",
-          "text": "Justice Sector Institutional Strengthening Project"
+          "text": "Customs Development Project; Tax Administration Reform Project; Justice Sector Institutional Strengthening Project"
         }
       ]
     },
@@ -315,16 +303,12 @@
       "actual": "Five high risk waste dumps and slurry ponds located in the city area have been contained through stabilization, dewatering and covering. Groundwater quality monitoring system has been established",
       "instruments": [
         {
+          "type": "jerp",
+          "text": "Review and Analysis of Norms and Standards Applicable to Industrial Hazardous Wastes in Kazakhstan; Partnership for Market Readiness Grant"
+        },
+        {
           "type": "no",
           "text": "Ust-Kamenogorsk Environmental Remediation Project"
-        },
-        {
-          "type": "jerp",
-          "text": "Review and Analysis of Norms and Standards Applicable to Industrial Hazardous Wastes in Kazakhstan;"
-        },
-        {
-          "type": "no",
-          "text": "Partnership for Market Readiness Grant"
         }
       ]
     },
@@ -336,11 +320,7 @@
       "instruments": [
         {
           "type": "no",
-          "text": "Forest Protection and Reforestation Project;"
-        },
-        {
-          "type": "no",
-          "text": "Forest Protection and Reforestation Grant"
+          "text": "Forest Protection and Reforestation Project; Forest Protection and Reforestation Grant"
         }
       ]
     },
@@ -351,8 +331,12 @@
       "actual": "Contracts were signed to improve irrigation and drainage services on 40,000 ha area",
       "instruments": [
         {
+          "type": "jerp",
+          "text": "Second Irrigation"
+        },
+        {
           "type": "no",
-          "text": "Second Irrigation and Drainage Project"
+          "text": "Drainage Project"
         }
       ]
     },
