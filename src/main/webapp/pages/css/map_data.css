@@ -1,3 +1,19 @@
+.body_class{
+    background-color: skyblue;
+    align-content: center;
+}
+
+.header {
+    background-color: #049cdb;
+    text-align: center;
+    position: relative;
+    height: 50px;
+    width: 1255px;
+    margin-bottom: 3px;
+    color: white;
+    padding-top: 15px;
+    font-size: 2em;
+}
 .map {
     background-color: #049cdb;
     text-align: center;
@@ -42,13 +58,16 @@
     float: left;
     top: 0px;
     box-sizing: border-box;
-    width: 250px;
+    width: 450px;
     background-color: #049cdb;
     border-radius: 0px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
     min-height: 800px;
     transition: opacity .5s;
+    color: white;
 }
+
 
 .d_header {
     background-color: darkgoldenrod;
@@ -57,10 +76,12 @@
     border-top-right-radius: 0px;
     padding: 8px;
     min-height: 50px;
+    font-size: 20px;
 }
 
 .d_items {
     padding: 10px 5px 25px 15px;
+    font-size: 20px;
 }
 
 .outcomes_button:hovers {

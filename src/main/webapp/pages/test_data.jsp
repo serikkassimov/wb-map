@@ -13,8 +13,9 @@
 
 </head>
 
-<body>
+<body class="body_class">
 <div id="app">
+    <div class="header">CPS Projects outcomes</div>
     <div class="map">
         <svg viewBox="-30 -35 270 297">
             <path d="M 95.014316,131.29289 74.434561,131.02562 94.346142,112.45039 C
@@ -104,6 +105,10 @@
         <div class="d_items">
             {{pillar_current.outcomes}} outcomes
         </div>
+        <ul>
+            <li v-for="item in pillar_current.outcomesList">{{item}}</li>
+        </ul>
+
     </div>
 </div>
 <script>
@@ -116,6 +121,7 @@
             pillar_current: {
                 header: "",
                 outcomes: 0,
+                outcomesList: []
             },
             current_outcomes: {
                 header: "",
@@ -132,10 +138,15 @@
         },
         methods: {
             showDescription: function (pillar) {
+                var that = this;
                 this.pillar_current.header = this.pillar_data[pillar].pillar;
                 var cnt = 0;
+                this.pillar_current.outcomesList=[];
                 this.outcomes_data.forEach(function (item, i, arr) {
-                    if (item.pillar == pillar + 1) cnt++;
+                    if (item.pillar == pillar + 1) {
+                        cnt++;
+                        that.pillar_current.outcomesList.push(item.outcome);
+                    }
                 })
                 this.pillar_current.outcomes = cnt;
                 this.selectPillarOutcomes(pillar);
@@ -157,6 +168,7 @@
             },
             showOutcomesDescription: function (item, event) {
                 var header;
+                this.pillar_current.outcomesList=[];
                 this.pillar_data.forEach(function (it, i, arr) {
                     if (it.id == item.pillar) {
                         header = it.pillar;
