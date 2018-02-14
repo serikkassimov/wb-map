@@ -77,13 +77,23 @@
     padding: 8px;
     min-height: 50px;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .d_items {
-    padding: 10px 5px 25px 15px;
+    padding: 10px 5px 5px 15px;
     font-size: 20px;
+    color: gold;
 }
 
+.d_actual{
+    padding: 10px 5px 5px 15px;
+    font-style: italic;
+    font-size: 18px;
+}
+.d_li{
+    cursor: pointer;
+}
 .outcomes_button:hovers {
     fill: #ad8f1b;
 }
@@ -93,7 +103,8 @@
 }
 
 .outcomes_button_select {
-    fill: #ad8f1b;
+    color: yellow;
+    fill: yellow;
 }
 
 .instrument_button:hovers {
@@ -105,7 +116,8 @@
 }
 
 .instrument_button_select {
-    fill: #ad8f1b;
+    color: yellow;
+    fill: yellow;
 }
 
 

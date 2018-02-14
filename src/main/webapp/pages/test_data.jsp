@@ -15,7 +15,7 @@
 
 <body class="body_class">
 <div id="app">
-    <div class="header">CPS Projects outcomes</div>
+    <div class="header">World Bank in Kazakhstan – CPS 2012-17 Results</div>
     <div class="map">
         <svg viewBox="-30 -35 270 297">
             <path d="M 95.014316,131.29289 74.434561,131.02562 94.346142,112.45039 C
@@ -100,14 +100,22 @@
         </svg>
     </div>
     <div class="description">
-        <div class="d_header">{{pillar_current.header}}
+        <div class="d_header"  v-on:click="showDescription(pillar_current.pillarNom-1)">
+            <div>Pillar {{pillar_current.pillarNom}}</div>
+            {{pillar_current.header}}
         </div>
         <div class="d_items">
             {{pillar_current.outcomes}} outcomes
         </div>
-        <ul>
-            <li v-for="item in pillar_current.outcomesList">{{item}}</li>
+        <ul class="d_li">
+            <li v-for="item in pillar_current.outcomesList"  v-on:click="showOutcomesDescription(item, $event)">{{item.outcome}}</li>
         </ul>
+        <ul>
+            <li v-for="item in pillar_current.instrList">{{item.text}} ({{item.type.toUpperCase()}})</li>
+        </ul>
+        <div class="d_actual">
+            {{pillar_current.actual}}
+        </div>
 
     </div>
 </div>
@@ -121,7 +129,9 @@
             pillar_current: {
                 header: "",
                 outcomes: 0,
-                outcomesList: []
+                outcomesList: [],
+                pillarNom: 1,
+                actual: "",
             },
             current_outcomes: {
                 header: "",
@@ -140,12 +150,15 @@
             showDescription: function (pillar) {
                 var that = this;
                 this.pillar_current.header = this.pillar_data[pillar].pillar;
+                that.pillar_current.pillarNom = pillar+1;
                 var cnt = 0;
-                this.pillar_current.outcomesList=[];
+                this.pillar_current.outcomesList = [];
+                this.pillar_current.instrList = [];
+                this.pillar_current.actual = "";
                 this.outcomes_data.forEach(function (item, i, arr) {
                     if (item.pillar == pillar + 1) {
                         cnt++;
-                        that.pillar_current.outcomesList.push(item.outcome);
+                        that.pillar_current.outcomesList.push(item);
                     }
                 })
                 this.pillar_current.outcomes = cnt;
@@ -168,14 +181,27 @@
             },
             showOutcomesDescription: function (item, event) {
                 var header;
-                this.pillar_current.outcomesList=[];
+                var nom;
+                var that = this;
+                this.pillar_current.outcomesList = [];
+                this.pillar_current.instrList = [];
                 this.pillar_data.forEach(function (it, i, arr) {
                     if (it.id == item.pillar) {
                         header = it.pillar;
+                        nom = i + 1;
+                    }
+                })
+                this.pillar_current.outcomesList = [];
+                item.instruments.forEach(function (item, i, arr) {
+                    {
+                        that.pillar_current.instrList.push(item);
+
                     }
                 })
                 item.selected = true;
+                this.pillar_current.actual = item.actual;
                 this.pillar_current.header = header;
+                this.pillar_current.pillarNom = nom;
                 this.pillar_current.outcomes = item.outcome;
                 this.show_desc = true;
             },
@@ -185,16 +211,28 @@
             },
             showInstrumentDescription: function (instr, item, event) {
                 var header;
-                /*this.pillar_data.forEach(function (it, i, arr) {
+                var nom;
+                var that = this;
+                this.pillar_current.actual = "";
+                this.pillar_data.forEach(function (it, i, arr) {
                     if (it.id == item.pillar) {
-                        header = item.instruments[0].type;
+                        header = it.pillar;
+                        nom = i + 1;
                     }
-                })*/
+                })
+                this.pillar_current.outcomesList = [];
+                this.pillar_current.instrList = [];
                 item.selected = true;
+                this.pillar_current.header = header;
+                this.pillar_current.pillarNom = nom;
+                this.pillar_current.outcomes = instr.text;
+                this.show_desc = true;
+
+               /* item.selected = true;
                 header = instr.type;
                 this.pillar_current.header = "INSTRUMENTS " + header;
                 this.pillar_current.outcomes = instr.text;
-                this.show_desc = true;
+                this.show_desc = true;*/
             },
             closeInstrumentDescription: function (instr, item, event) {
                 item.selected = false;
@@ -221,18 +259,18 @@
                             res = "m 25.123335," + i + " c -2.866994,-2.657201 -3.135774,-2.922921 -3.135774,-2.922921 l 3.046181,-4.074242 3.046181,4.074242 z";
                         } else if (instr.type == "ifc") {
                             res = "m 19.745587,20.690722 c 11.339546,0.105128 11.431736,0.105128 11.431736,0.105128 -1.590301,4.323369 -0.570974,6.03711 0,8.199204 l -11.422525,-0.03188 c 1.559229,-2.822055 1.455272,-5.702373 -0.0092,-8.272452 z";
-                        } else if (instr.type == "no") {
+                        } else if (instr.type == "wb project") {
                             res = "m 25.123335,19.346727 6.910147,6.3311 -13.890625,-0.09449 z";
                         }
                     })
                 }
-                console.log("item instrument count", item.instruments.length);
+           //     console.log("item instrument count", item.instruments.length);
                 return res;
             },
             getPathInstrumentN: function (index, inst_ind) {
                 var res = "";
                 var item = this.outcomes_data[index];
-                console.log("inst_ind", inst_ind)
+             //   console.log("inst_ind", inst_ind)
                 if (item.instruments != undefined) {
                     var instr = item.instruments[inst_ind];
                     if (instr.type == "jerp") {
@@ -241,13 +279,13 @@
                     } else if (instr.type == "ifc") {
                         var i = 20.690722 - 10 * inst_ind;
                         res = "m 19.745587," + i + " c 11.339546,0.105128 11.431736,0.105128 11.431736,0.105128 -1.590301,4.323369 -0.570974,6.03711 0,8.199204 l -11.422525,-0.03188 c 1.559229,-2.822055 1.455272,-5.702373 -0.0092,-8.272452 z";
-                    } else if (instr.type == "no") {
+                    } else if (instr.type == "wb project") {
                         var i = 19.346727 - 10 * inst_ind;
                         res = "m 25.123335," + i + " 6.910147,6.3311 -13.890625,-0.09449 z";
                     }
 
                 }
-                console.log("item instrument count", item.instruments.length);
+              //  console.log("item instrument count", item.instruments.length);
                 return res;
             },
             outcomes_button: function (item) {
@@ -259,9 +297,9 @@
             },
             instrument_button: function (item) {
                 if (item.selected) {
-                    return "outcomes_button_select";
+                    return "instrument_button_select";
                 } else {
-                    return "outcomes_button"
+                    return "instrument_button"
                 }
             },
             loadData: function () {
