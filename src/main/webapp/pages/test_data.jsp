@@ -101,17 +101,17 @@
     </div>
     <div class="description">
         <div class="d_header"  v-on:click="showDescription(pillar_current.pillarNom-1)">
-            <div>Pillar {{pillar_current.pillarNom}}</div>
+            <div>{{pillar_current.descHeader}}</div>
             {{pillar_current.header}}
         </div>
         <div class="d_items">
-            {{pillar_current.outcomes}} outcomes
+            {{pillar_current.outcomes}}
         </div>
         <ul class="d_li">
             <li v-for="item in pillar_current.outcomesList"  v-on:click="showOutcomesDescription(item, $event)">{{item.outcome}}</li>
         </ul>
         <ul>
-            <li v-for="item in pillar_current.instrList">{{item.text}} ({{item.type.toUpperCase()}})</li>
+            <li v-for="item in pillar_current.instrList">{{item}}</li>
         </ul>
         <div class="d_actual">
             {{pillar_current.actual}}
@@ -131,6 +131,7 @@
                 outcomes: 0,
                 outcomesList: [],
                 pillarNom: 1,
+                descHeader: "",
                 actual: "",
             },
             current_outcomes: {
@@ -150,7 +151,9 @@
             showDescription: function (pillar) {
                 var that = this;
                 this.pillar_current.header = this.pillar_data[pillar].pillar;
-                that.pillar_current.pillarNom = pillar+1;
+                var nom = pillar+1;
+                that.pillar_current.pillarNom = nom;
+                that.pillar_current.descHeader = "Pillar "+nom;
                 var cnt = 0;
                 this.pillar_current.outcomesList = [];
                 this.pillar_current.instrList = [];
@@ -161,7 +164,7 @@
                         that.pillar_current.outcomesList.push(item);
                     }
                 })
-                this.pillar_current.outcomes = cnt;
+                this.pillar_current.outcomes = cnt + "outcomes";
                 this.selectPillarOutcomes(pillar);
                 this.show_desc = true;
             },
@@ -192,16 +195,17 @@
                     }
                 })
                 this.pillar_current.outcomesList = [];
-                item.instruments.forEach(function (item, i, arr) {
+                /*item.instruments.forEach(function (item, i, arr) {
                     {
                         that.pillar_current.instrList.push(item);
 
                     }
-                })
+                })*/
                 item.selected = true;
                 this.pillar_current.actual = item.actual;
                 this.pillar_current.header = header;
                 this.pillar_current.pillarNom = nom;
+                this.pillar_current.descHeader = "Pillar "+nom;
                 this.pillar_current.outcomes = item.outcome;
                 this.show_desc = true;
             },
@@ -210,29 +214,24 @@
                 this.show_desc = false;
             },
             showInstrumentDescription: function (instr, item, event) {
-                var header;
-                var nom;
+                console.log(instr);
                 var that = this;
                 this.pillar_current.actual = "";
-                this.pillar_data.forEach(function (it, i, arr) {
-                    if (it.id == item.pillar) {
-                        header = it.pillar;
-                        nom = i + 1;
-                    }
-                })
                 this.pillar_current.outcomesList = [];
                 this.pillar_current.instrList = [];
+                this.pillar_current.descHeader = "";
                 item.selected = true;
-                this.pillar_current.header = header;
-                this.pillar_current.pillarNom = nom;
-                this.pillar_current.outcomes = instr.text;
+                this.pillar_current.header = instr.type.toUpperCase();
+                this.pillar_current.descHeader = "Instrument";
+                this.pillar_current.outcomes = "";
+                var arrayOfLines = instr.text.split(';');
+                arrayOfLines.forEach(function (it, i, arr) {
+                    that.pillar_current.instrList.push(it);
+                })
+
+
                 this.show_desc = true;
 
-               /* item.selected = true;
-                header = instr.type;
-                this.pillar_current.header = "INSTRUMENTS " + header;
-                this.pillar_current.outcomes = instr.text;
-                this.show_desc = true;*/
             },
             closeInstrumentDescription: function (instr, item, event) {
                 item.selected = false;
