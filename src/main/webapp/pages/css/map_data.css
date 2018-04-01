@@ -94,6 +94,11 @@
 .d_li{
     cursor: pointer;
 }
+
+.d_li_ins {
+    cursor: pointer;
+    font-size: 20px;
+}
 .outcomes_button:hovers {
     fill: #ad8f1b;
 }

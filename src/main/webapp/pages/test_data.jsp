@@ -110,7 +110,7 @@
         <ul class="d_li">
             <li v-for="item in pillar_current.outcomesList"  v-on:click="showOutcomesDescription(item, $event)">{{item.outcome}}</li>
         </ul>
-        <ul>
+        <ul class="d_li_ins">
             <li v-for="item in pillar_current.instrList">{{item}}</li>
         </ul>
         <div class="d_actual">
@@ -128,7 +128,7 @@
             box_size: "-15 -15 250 297",
             pillar_current: {
                 header: "",
-                outcomes: 0,
+                outcomes: "",
                 outcomesList: [],
                 pillarNom: 1,
                 descHeader: "",
@@ -164,7 +164,7 @@
                         that.pillar_current.outcomesList.push(item);
                     }
                 })
-                this.pillar_current.outcomes = cnt + "outcomes";
+                this.pillar_current.outcomes = cnt + " outcomes";
                 this.selectPillarOutcomes(pillar);
                 this.show_desc = true;
             },
@@ -214,15 +214,24 @@
                 this.show_desc = false;
             },
             showInstrumentDescription: function (instr, item, event) {
-                console.log(instr);
+
                 var that = this;
                 this.pillar_current.actual = "";
                 this.pillar_current.outcomesList = [];
                 this.pillar_current.instrList = [];
                 this.pillar_current.descHeader = "";
                 item.selected = true;
-                this.pillar_current.header = instr.type.toUpperCase();
-                this.pillar_current.descHeader = "Instrument";
+
+                this.pillar_current.header = "";
+                var type = "";
+                if (instr.type == "jerp") {
+                    type = "JERP";
+                } else if (instr.type == "ifc") {
+                    type = "IFC Operation(s)";
+                } else if (instr.type == "wb project") {
+                    type = "WB Project(s)"
+                }
+                this.pillar_current.descHeader = "Instrument : " + type;
                 this.pillar_current.outcomes = "";
                 var arrayOfLines = instr.text.split(';');
                 arrayOfLines.forEach(function (it, i, arr) {
